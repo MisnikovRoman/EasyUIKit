@@ -66,12 +66,12 @@ final public class GalleryCollectionView: UICollectionView {
 
 extension GalleryCollectionView: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView,
-                        numberOfItemsInSection section: Int) -> Int {
+                               numberOfItemsInSection section: Int) -> Int {
         self.images.count
     }
 
     public func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+                               cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let dequeuedCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseId,
                                                               for: indexPath)
         guard let cell = dequeuedCell as? ImageCell else { return UICollectionViewCell() }
