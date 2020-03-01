@@ -17,6 +17,7 @@ final public class ImageCell: UICollectionViewCell {
         self.setup()
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -51,7 +52,7 @@ final public class GalleryCollectionView: UICollectionView {
         self.setup()
     }
 
-    override public var intrinsicContentSize: CGSize {
+    public override var intrinsicContentSize: CGSize {
         CGSize(width: UIView.noIntrinsicMetric, height: self.imageHeight)
     }
 
