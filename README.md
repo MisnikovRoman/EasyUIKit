@@ -52,3 +52,8 @@ let fullySettedUpButton = Button("Run", type: .outline, color: .red, foregroundC
     action()
 }
 ```
+* Vertical scroll view (UIScrollView + UIStackView)
+_Use for create simple menu or setting style screen inside vertical scroll view_
+```swift
+let verticalScroll = VerticalScrollView(arrangedViews: arrayOfViews)
+```
