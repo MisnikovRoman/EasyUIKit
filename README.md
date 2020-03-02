@@ -7,7 +7,7 @@ Pros:
 * SwiftUI style
 
 ## Components  
-### TableView  
+### Button  
 _Simple button_
 ```swift
 private let simpleAccentButton = Button("Simple accent") { print("1") }
