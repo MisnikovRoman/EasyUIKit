@@ -42,4 +42,13 @@ let tv = TableView<SimpleCell, SimpleViewModel>(
 ```
 
 ## Future components
-* TableView
+* Button
+```swift
+// enum ButtonType { case accent, outline, ghost }
+
+let simpleButton = Button("Test") { print("test") }
+
+let fullySettedUpButton = Button("Run", type: .outline, color: .red, foregroundColor: .white) {
+    action()
+}
+```
