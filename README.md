@@ -7,7 +7,15 @@ Pros:
 * SwiftUI style
 
 ## Components  
-### GalleryCollectionView  
+### TableView  
+_Simple button_
+```swift
+private let simpleAccentButton = Button("Simple accent") { print("1") }
+private let outline = Button("Outline", style: .outline, color: .blue, foregroundColor: .white, cornerRadius: 8, action: { print("3") })
+private let ghost = Button("ghost", style: .ghost, color: .green, action: { print("4") })
+```
+
+### GalleryCollectionView 
 _Horizontal 1-line collection view_
 ```swift
 let gallery = GalleryCollectionView(height: 120, images: [UIImage(named: "a"), ...])
@@ -42,16 +50,6 @@ let tv = TableView<SimpleCell, SimpleViewModel>(
 ```
 
 ## Future components
-* Button
-```swift
-// enum ButtonType { case accent, outline, ghost }
-
-let simpleButton = Button("Test") { print("test") }
-
-let fullySettedUpButton = Button("Run", type: .outline, color: .red, foregroundColor: .white) {
-    action()
-}
-```
 * Vertical scroll view (UIScrollView + UIStackView)
 _Use for create simple menu or setting style screen inside vertical scroll view_
 ```swift
