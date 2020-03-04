@@ -48,6 +48,20 @@ let tv = TableView<SimpleCell, SimpleViewModel>(
     }
 )
 ```
+### TextField  
+_Simple text field with validation and _
+```swift
+let textField = TextField(
+    "Password",
+    placeholder: "****",
+    icon: UIImage(systemName: "person")?.withTintColor(self.redColor),
+    validationAction: { $0.count >= 8 }
+)
+textField.isSecureTextEntry = true
+textField.validationFailureText = "Use at least 8 symbols"
+textField.validationSuccessText = "Secure password"
+return textField
+```
 
 ## Future components
 * Vertical scroll view (UIScrollView + UIStackView)
