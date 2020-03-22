@@ -16,6 +16,9 @@ final public class Button: UIButton {
     private let color: UIColor
     private let foregroundColor: UIColor
     private var cornerRadius: CGFloat
+    private var padding = CGSize(width: 0, height: 0) {
+        didSet { self.setNeedsLayout() }
+    }
     
     public var action: (() -> Void)?
     
@@ -39,6 +42,16 @@ final public class Button: UIButton {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public override var intrinsicContentSize: CGSize {
+        return super.intrinsicContentSize.withPadding(size: self.padding)
+    }
+    
+    @discardableResult
+    public func padding(_ size: CGSize = CGSize(width: 16, height: 8)) -> Button {
+        self.padding = size
+        return self
     }
 }
 
@@ -64,5 +77,11 @@ private extension Button {
     
     @objc func tapHandler() {
         self.action?()
+    }
+}
+
+extension CGSize {
+    func withPadding(size: CGSize) -> CGSize {
+        return CGSize(width: self.width + size.width, height: self.height + size.height)
     }
 }
