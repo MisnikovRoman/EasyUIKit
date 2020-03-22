@@ -10,7 +10,7 @@ import TinyConstraints
 
 public class VerticalScrollView: UIScrollView {
     
-    private var container: UIView!
+    private var container: UIView?
     
     public init(container: UIView) {
         self.container = container
@@ -37,8 +37,9 @@ public class VerticalScrollView: UIScrollView {
 
 private extension VerticalScrollView {
     func setup() {
+        guard let container = container else { return assertionFailure("Container must be initialized") }
         self.addSubview(self.container)
-        self.container.edgesToSuperview()
-        self.container.widthToSuperview()
+        self.container?.edgesToSuperview()
+        self.container?.widthToSuperview()
     }
 }
