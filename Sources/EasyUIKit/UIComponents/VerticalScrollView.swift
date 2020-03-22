@@ -18,9 +18,9 @@ public class VerticalScrollView: UIScrollView {
         self.setup()
     }
     
-    public convenience init(views: [UIView]) {
+    public convenience init(views: [UIView], spacing: CGFloat = 8) {
         let container = UIView()
-        container.stack(views)
+        container.stack(views, spacing: spacing)
         self.init(container: container)
     }
     
