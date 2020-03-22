@@ -49,7 +49,7 @@ final public class Button: UIButton {
     }
     
     @discardableResult
-    public func padding(_ size: CGSize = CGSize(width: 16, height: 16)) -> Button {
+    public func padding(_ size: CGSize = CGSize(width: 16, height: 8)) -> Button {
         self.padding = size
         return self
     }
