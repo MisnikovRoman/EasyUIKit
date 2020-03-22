@@ -58,7 +58,7 @@ let tv = TableView<SimpleCell, SimpleViewModel>(
 )
 ```
 ### TextField  
-_Simple text field with validation and _
+_Simple text field with validation_
 ```swift
 let textField = TextField(
     "Password",
@@ -72,9 +72,16 @@ textField.validationSuccessText = "Secure password"
 return textField
 ```
 
-## Future components
-* Vertical scroll view (UIScrollView + UIStackView)
-_Use for create simple menu or setting style screen inside vertical scroll view_
+### Vertical scroll view (UIScrollView + UIStackView)
+_Use for create simple menu_
 ```swift
-let verticalScroll = VerticalScrollView(arrangedViews: arrayOfViews)
+let verticalScroll = VerticalScrollView(views: arrayOfViews, spacing: 16)
+let anotherVerticalScroll = VercitalScrollView(container: containerView)
+```
+
+## Future components
+
+* DropDownMenu
+```swift
+let menu = DropDownMenu(["One", "Two", "Three"]) { print($0, "selected") }
 ```
