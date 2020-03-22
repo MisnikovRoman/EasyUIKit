@@ -15,6 +15,15 @@ private let outline = Button("Outline", style: .outline, color: .blue, foregroun
 private let ghost = Button("ghost", style: .ghost, color: .green, action: { print("4") })
 ```
 
+You can add extra padding to button using `.padding(CGSize(width: 16, height: 8))` method
+```swift
+private let buttons: [UIButton] = [
+  Button("Primary", style: .accent, color: .red).padding(),
+  Button("Secondary", style: .outline, color: .red).padding(),
+  Button("Tetriary", style: .ghost, color: .red).padding(),
+]
+```
+
 ### GalleryCollectionView 
 _Horizontal 1-line collection view_
 ```swift
