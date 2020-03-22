@@ -48,8 +48,10 @@ final public class Button: UIButton {
         return super.intrinsicContentSize.withPadding(size: self.padding)
     }
     
-    func padding(_ size: CGSize = CGSize(width: 16, height: 16)) {
+    @discardableResult
+    public func padding(_ size: CGSize = CGSize(width: 16, height: 16)) -> Button {
         self.padding = size
+        return self
     }
 }
 
