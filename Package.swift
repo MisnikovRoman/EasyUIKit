@@ -6,13 +6,11 @@ import PackageDescription
 let package = Package(
     name: "EasyUIKit",
     platforms: [
-        .iOS(.v11)
+        .iOS(.v11),
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
-        .library(
-            name: "EasyUIKit",
-            targets: ["EasyUIKit"]),
+        .library(name: "EasyUIKit", targets: ["EasyUIKit"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -23,7 +21,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "EasyUIKit",
-            dependencies: []),
+            dependencies: ["TinyConstraints"]),
         .testTarget(
             name: "EasyUIKitTests",
             dependencies: ["EasyUIKit"]),

@@ -9,6 +9,7 @@ disabled_rules:
   - todo
   - vertical_parameter_alignment # выключено, так как swiftlint не умеет в табы
   - unused_setter_value # выключено, так как не оценена целесообразность
+  - trailing_whitespace
 
 opt_in_rules:
   - anyobject_protocol
